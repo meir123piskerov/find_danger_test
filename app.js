@@ -7,7 +7,7 @@ async function main() {
       fs.readFileSync("TRANSCRIPTIONS.json", "utf8")
     );
     let userChoice = input(
-      "Press \n 1 to search by name: \n 2 to search by age: \n 3 to see the list of DangerousCalls by age: \n exit to exit: \n enter your choice here:"
+      "Press \n 1 to search by name: \n 2 to search by age: \n 3 to see the list of DangerousCalls by age:\n 4 to get average \n exit to exit: \n enter your choice here:"
     );
     if (userChoice === `1`) {
       while (true) {
@@ -53,6 +53,8 @@ async function main() {
       }
     } else if (userChoice === "3") {
       getInfoOnPeople();
+    } else if (userChoice === "4") {
+      getAverage();
     } else if (userChoice === "exit") {
       break;
     } else {
